@@ -3,9 +3,9 @@ body {
   position: relative;
 }
 
-.opening {
-  // text-align: center;
-}
+// .opening {
+//   text-align: center;
+// }
 
 .square {
   transform: translate(-50%,-50%);
@@ -16,6 +16,7 @@ body {
   margin-left: calc((100vw) / 2);
   display: fixed;
   background-color: #000000;
+  animation: round2 5s ;  //infinite linear 無限循環
 }
 
 .circle {
@@ -41,6 +42,7 @@ body {
   border-color: #FF3C82 transparent #FF3C82 transparent;
   margin-top: calc((100vh) / 2);
   margin-left: calc((100vw) / 2);
+  animation: round1 5s ;  //infinite linear 無限循環
 
   &:before {
     top: -160px;
@@ -79,5 +81,24 @@ body {
     font-size: 24px;
     color: #FFFFFF;
     line-height: 36px;
+    margin-left: 110px;
+  }
+}
+
+@keyframes round1 {
+  0% { 
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
+
+@keyframes round2 {
+  0% { 
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%,-50%) rotate(-360deg);
   }
 }
